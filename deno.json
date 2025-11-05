@@ -1,0 +1,17 @@
+{
+	"name": "@paulaboks/print-to-pdf",
+	"version": "0.0.1",
+	"tasks": {
+	},
+	"imports": {
+		"@std/assert": "jsr:@std/assert@^1.0.15",
+		"@std/cli": "jsr:@std/cli@1.0.23",
+		"puppeteer-core": "npm:puppeteer-core@24.29.0"
+	},
+	"fmt": {
+		"useTabs": true,
+		"indentWidth": 4,
+		"lineWidth": 120,
+		"newLineKind": "lf"
+	}
+}
