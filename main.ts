@@ -14,12 +14,12 @@ const browser = await puppeteer.launch({
 
 const page = await browser.newPage();
 
-await page.goto(args.page);
-
-// Default wait time is 50 (dunno, it was crashing sometimes with 0 as timeout)
-await new Promise((resolve) => setTimeout(resolve, args.wait_time ?? 50));
-
 await page.setViewport({ width: args.width ?? 900, height: args.height ?? 1024 });
+
+await page.goto(args.page, { waitUntil: "networkidle0", timeout: 30000 });
+
+// Default wait time is 100 (dunno, it was crashing sometimes with 0 as timeout)
+await new Promise((resolve) => setTimeout(resolve, args.wait_time ?? 100));
 
 const pdf_file = await Deno.makeTempFile();
 
