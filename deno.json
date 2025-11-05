@@ -1,6 +1,7 @@
 {
 	"name": "@paulaboks/print-to-pdf",
 	"version": "0.0.1",
+	"exports": "./main.ts",
 	"tasks": {
 	},
 	"imports": {
